@@ -6,16 +6,29 @@
 
     {% seo %}
 
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/8ef91dbf12.js" crossorigin="anonymous"></script>
     <!--  Bootstrap and Theme  -->
     <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
 
     <title>{{ page.title }}</title>
 </head>
 <body>
-    {% include header.html %}
-    {{ content }}
-    {% include footer.html %}
+    <div class="wrapper d-flex align-items-stretch">
+        {% include sidebar.html %}
 
+        <div id="content" class="p-4 p-md-5">
+
+            {% include navbar.html %}
+    
+            {{ content }}
+
+            {% include footer.html %}
+          </div>
+        </div>
+    </div>
+
+    <!-- JQuery and Bootstrap JS -->
    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
