@@ -1,6 +1,9 @@
 
 @import "bootstrap/bootstrap";
 
+$theme_primary: #f8b739;
+$theme_dark: #1d1919;
+
 // Sideways collapse for sidebar
 .collapsing {
   position: relative;
@@ -31,7 +34,7 @@ a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-  color: #f8b739;
+  color: $theme_primary;
 } a:hover, a:focus {
     text-decoration: none !important;
     outline: none !important;
@@ -114,7 +117,7 @@ h1, h2, h3, h4, h5,
 #sidebar {
   min-width: 300px;
   max-width: 300px;
-  background: #1d1919;
+  background: $theme_dark;
   color: #fff;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -146,11 +149,11 @@ h1, h2, h3, h4, h5,
       color: rgba(255, 255, 255, 0.8);
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     } #sidebar ul li a:hover {
-        color: #f8b739;
+        color: $theme_primary;
       }
     #sidebar ul li.active > a {
       background: transparent;
-      color: #f8b739;
+      color: $theme_primary;
     }
   @media (max-width: 991.98px) {
     #sidebar {
@@ -185,16 +188,16 @@ a[data-toggle="collapse"] {
 }
 
 .btn.btn-primary {
-  background: #f8b739;
-  border-color: #f8b739;
+  background: $theme_primary;
+  border-color: $theme_primary;
 } .btn.btn-primary:hover, .btn.btn-primary:focus {
-    background: #f8b739 !important;
-    border-color: #f8b739 !important;
+    background: $theme_primary !important;
+    border-color: $theme_primary !important;
   }
 
 .footer {
   width: 100%;
-  background: #1d1919;
+  background:  $theme_dark;
 } .footer p {
   color: rgba(255, 255, 255, 0.5);
 }
