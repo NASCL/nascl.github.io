@@ -1,3 +1,4 @@
+// Sidebar collapse function
 (function($) {
 
 	"use strict";
