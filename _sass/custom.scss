@@ -4,22 +4,6 @@
 $theme_primary: #f8b739;
 $theme_dark: #1d1919;
 
-// Sideways collapse for sidebar
-.collapsing {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  transition-timing-function: ease;
-  transition-duration: .35s;
-  transition-property: height;
-
-  &.width {
-    width: 0;
-    height: auto;
-    transition-property: width;
-  }
-}
-
 // Theme
 body {
   font-family: "Poppins", Arial, sans-serif;
@@ -176,6 +160,10 @@ a[data-toggle="collapse"] {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
+@media (max-width: 991.98px) {
+  #sidebarCollapse span {
+    display: none; } }
 
 #content {
   background: rgb(228, 228, 228);
