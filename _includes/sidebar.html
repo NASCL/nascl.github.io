@@ -1,6 +1,6 @@
 <nav id="sidebar" class="collapse width show">
     <div class="p-4 pt-5">
-        <a href="#" id="labLogo" class="img logo rounded-circle mb-4" style="background-image: url(assets/img/default-placeholder-image.png)"></a>
+        <img id="labLogo" class="img logo rounded-circle mb-4" src="{{ "/assets/img/default-placeholder-image.png" | site.url }}">
     
         <h2 class="text-center font-weight-bold" style="color:whitesmoke">NASCL</h2>
         
@@ -12,7 +12,7 @@
                 <a href="#">Research</a>
             </li>
             <li>
-                <a href=#>People</a>
+                <a href="{{ "people" | relative_url }}">People</a>
                 <!-- <a href="#peopleSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">
                     People
                 </a>
