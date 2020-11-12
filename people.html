@@ -1,0 +1,16 @@
+---
+title: People
+layout: default
+---
+
+<h1>People</h1>
+
+<p>test</p>
+
+<ul>
+    {% for person in site.people %}
+        <li>
+            <a href="{{ person.url }}">{{ person.first_name }}</a>
+        </li>
+    {% endfor %}
+</ul>

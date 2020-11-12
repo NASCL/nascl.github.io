@@ -2,3 +2,8 @@ title: 'NASCL'
 description:
 
 repository: 'NASCL/nascl.github.io'
+
+collections:
+  people:
+    output: true
+    # permalink: /:collection/:last_name/
