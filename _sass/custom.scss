@@ -14,6 +14,12 @@ $theme_light_gray: #e4e4e4;
 $theme_font_family: 'Lato', sans-serif;
 $theme_font_size: 16px;
 
+.card-img-top {
+  width: 100%;
+  height: 25vh;
+  object-fit: cover;
+}
+
 // Theme
 body {
   font-family: $theme_font_family;

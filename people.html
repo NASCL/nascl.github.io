@@ -7,10 +7,18 @@ layout: default
 
 <p>test</p>
 
-<ul>
-    {% for person in site.people %}
-        <li>
-            <a href="{{ person.url }}">{{ person.first_name }}</a>
-        </li>
-    {% endfor %}
-</ul>
+{% for person in site.people %}
+    <div class="card-deck">
+        <div class="card rounded border mb-3" style="max-width: 20rem;">
+            <img class="card-img-top" src="{{ person.image }}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ person.first_name | capitalize }} {{ person.last_name | capitalize }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ person.role }}</h6>
+
+                <p class="card-text">{{ person.info }}</p>
+
+                <a href="{{ person.url }}" class="btn btn-primary">My page</a>
+            </div>
+        </div>
+    </div>
+{% endfor %}
