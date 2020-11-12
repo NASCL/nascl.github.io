@@ -3,17 +3,16 @@ title: People
 layout: default
 ---
 
-<h1>People</h1>
+<h1>NASCL &mdash; Lab Members</h1>
 
-<p>test</p>
-
-{% for person in site.people %}
-    <div class="card-deck">
-        <div class="card rounded border mb-3" style="max-width: 20rem;">
+<div class="row">
+    {% for person in site.people %}
+    <div class="col-sm-6 col-md-4">
+        <div class="card rounded border mb-3" style="max-width: 30rem;">
             <img class="card-img-top" src="{{ person.image }}" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">{{ person.first_name | capitalize }} {{ person.last_name | capitalize }}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">{{ person.role }}</h6>
+                <h4 class="card-title">{{ person.first_name | capitalize }} {{ person.last_name | capitalize }}</h4>
+                <h5 class="card-subtitle mb-2 text-muted">{{ person.role }}</h5>
 
                 <p class="card-text">{{ person.info }}</p>
 
@@ -22,3 +21,4 @@ layout: default
         </div>
     </div>
 {% endfor %}
+</div>
