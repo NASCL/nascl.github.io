@@ -1,20 +1,20 @@
 // Sidebar collapse function
-(function($) {
+(function ($) {
 
-	"use strict";
+    "use strict";
 
-	let fullHeight = function() {
+    let fullHeight = function () {
 
-		$('.js-fullheight').css('height', $(window).height());
-		$(window).resize(function(){
-			$('.js-fullheight').css('height', $(window).height());
-		});
+        $('.js-fullheight').css('height', $(window).height());
+        $(window).resize(function () {
+            $('.js-fullheight').css('height', $(window).height());
+        });
 
-	};
-	fullHeight();
+    };
+    fullHeight();
 
-	$('#sidebarCollapse').on('click', function () {
-      $('#sidebar').toggleClass('active');
-  });
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
 
 })(jQuery);

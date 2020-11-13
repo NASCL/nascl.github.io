@@ -3,22 +3,26 @@ title: People
 layout: default
 ---
 
-<h1 class="mb-4 font-weight-bold">Lab Members</h1>
+<h1 class="mb-4 font-weight-bold">
+  Lab Members
+</h1>
 
 <div class="row">
-    {% for person in site.people %}
+  {% for person in site.people %}
     <div class="col-sm-6 col-md-4">
-        <div class="card rounded border mb-3" style="max-width: 30rem;">
-            <img class="card-img-top" src="{{ person.image }}" alt="Card image cap">
-            <div class="card-body">
-                <h4 class="card-title">{{ person.first_name | capitalize }} {{ person.last_name | capitalize }}</h4>
-                <h5 class="card-subtitle mb-2 text-muted">{{ person.role }}</h5>
+      <div class="card rounded border mb-3" style="max-width: 30rem;">
+        <img class="card-img-top" src="{{ person.image }}" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">
+            {{ person.first_name | capitalize }} {{ person.last_name | capitalize }}
+          </h4>
+          <h5 class="card-subtitle mb-2 text-muted">{{ person.role }}</h5>
 
-                <p class="card-text">{{ person.info }}</p>
+          <p class="card-text">{{ person.info }}</p>
 
-                <a href="{{ person.url }}" class="btn btn-primary">My page</a>
-            </div>
+          <a href="{{ person.url }}" class="btn btn-primary">My page</a>
         </div>
+      </div>
     </div>
-{% endfor %}
+  {% endfor %}
 </div>

@@ -1,45 +1,51 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-    <div class="container-fluid">
+  <div class="container-fluid">
 
-      <button type="button" id="sidebarCollapse" class="btn btn-primary">
-        <i class="fa fa-bars"></i>
-        <span class="sr-only">Toggle Menu</span>
-      </button>
+    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+      <i class="fa fa-bars"></i>
+      <span class="sr-only">Toggle Menu</span>
+    </button>
 
-      <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fa fa-bars"></i>
-      </button>
+    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <i class="fa fa-bars"></i>
+    </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="nav navbar-nav ml-auto">
-          <li class="nav-item active">
-              <a class="nav-link" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">Research</a>
-          </li>
-          <li class="nav-item mr-1">
-            <div class="btn-group">
-              <a class="nav-link" href="{{ "people" | relative_url }}">People</a>
-              <button class="btn d-none d-lg-block nav-link dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="sr-only">Toggle Dropdown</span>
-              </button>
-              <div class="dropdown-menu">
-                {% for person in site.people %}
-                  <a class="dropdown-item" href="{{ person.url }}">
-                    {{ person.first_name | capitalize}} {{ person.last_name | capitalize}}
-                  </a>
-                {% endfor %}
-              </div>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Publications</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home</a>
         </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Research</a>
+        </li>
+        <li class="nav-item mr-1">
+          <div class="btn-group">
+            <a class="nav-link" href="{{ "people" | relative_url }}">People</a>
+            <button class="btn d-none d-lg-block nav-link dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu">
+              {% for person in site.people %}
+              <a class="dropdown-item" href="{{ person.url }}">
+                {{ person.first_name | capitalize }} {{ person.last_name | capitalize }}
+                {% if forloop.index < site.people.size %}
+                <div class="dropdown-divider"></div>
+                {% endif %}
+              </a>
+              {% endfor %}
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Publications</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
     </div>
+  </div>
 </nav>

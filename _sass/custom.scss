@@ -35,7 +35,8 @@ a {
   -o-transition: .3s all ease;
   transition: .3s all ease;
   color: $theme_primary;
-} a:hover, a:focus {
+} 
+  a:hover, a:focus {
     text-decoration: none !important;
     outline: none !important;
     -webkit-box-shadow: none;
@@ -46,7 +47,8 @@ button {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-} button:hover, button:focus {
+}
+  button:hover, button:focus {
     text-decoration: none !important;
     outline: none !important;
     -webkit-box-shadow: none !important;
@@ -76,7 +78,8 @@ h1, h2, h3, h4, h5,
 .heading-section {
   font-size: 3.0rem;
   color: #000;
-} .heading-section small {
+}
+  .heading-section small {
     font-size: 2.5rem;
   }
 
@@ -127,7 +130,8 @@ h1, h2, h3, h4, h5,
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-} #sidebar.active {
+}
+  #sidebar.active {
     margin-left: -300px;
   }
   #sidebar .logo {
@@ -135,7 +139,8 @@ h1, h2, h3, h4, h5,
     width: 150px;
     height: 150px;
     margin: 0 auto;
-  } #sidebar .logo span {
+  }
+    #sidebar .logo span {
       display: block;
     }
   #sidebar ul.components {
@@ -143,9 +148,11 @@ h1, h2, h3, h4, h5,
   }
   #sidebar ul li {
     font-size: $theme_font_size + 2px;
-  } #sidebar ul li > ul {
+  }
+    #sidebar ul li > ul {
       margin-left: 10px;
-    } #sidebar ul li > ul li {
+    }
+      #sidebar ul li > ul li {
         font-size: $theme_font_size;
       }
     #sidebar ul li a {
@@ -153,7 +160,8 @@ h1, h2, h3, h4, h5,
       display: block;
       color: rgba(255, 255, 255, 0.8);
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    } #sidebar ul li a:hover {
+    }
+      #sidebar ul li a:hover {
         color: $theme_primary;
       }
     #sidebar ul li.active > a {
@@ -163,7 +171,8 @@ h1, h2, h3, h4, h5,
   @media (max-width: 991.98px) {
     #sidebar {
       margin-left: -300px;
-    } #sidebar.active {
+    }
+      #sidebar.active {
         margin-left: 0;
       }
   }
@@ -199,7 +208,8 @@ a[data-toggle="collapse"] {
 .btn.btn-primary {
   background: $theme_primary;
   border-color: $theme_primary;
-} .btn.btn-primary:hover, .btn.btn-primary:focus {
+}
+  .btn.btn-primary:hover, .btn.btn-primary:focus {
     background: $theme_primary !important;
     border-color: $theme_primary !important;
   }
@@ -207,6 +217,7 @@ a[data-toggle="collapse"] {
 .footer {
   width: 100%;
   background: $theme_dark;
-} .footer p {
+}
+  .footer p {
   color: rgba(255, 255, 255, 0.5);
 }
