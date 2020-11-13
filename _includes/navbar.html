@@ -29,12 +29,12 @@
             </button>
             <div class="dropdown-menu">
               {% for person in site.people %}
-              <a class="dropdown-item" href="{{ person.url }}">
-                {{ person.first_name | capitalize }} {{ person.last_name | capitalize }}
+                <a class="nav-link dropdown-item" href="{{ person.url }}">
+                  {{ person.first_name | capitalize }} {{ person.last_name | capitalize }}
+                </a>
                 {% if forloop.index < site.people.size %}
-                <div class="dropdown-divider"></div>
+                  <div class="dropdown-divider"></div>
                 {% endif %}
-              </a>
               {% endfor %}
             </div>
           </div>
