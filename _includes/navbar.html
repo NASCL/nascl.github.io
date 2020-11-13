@@ -20,15 +20,17 @@
           </li>
           <li class="nav-item mr-1">
             <div class="btn-group">
-              <button class="btn nav-link">People</button>
+              <a class="nav-link" href="{{ "people" | relative_url }}">People</a>
               <button class="btn d-none d-lg-block nav-link dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="sr-only">Toggle Dropdown</span>
               </button>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Person 1</a>
-                <a class="dropdown-item" href="#">Person 2</a>
-                <a class="dropdown-item" href="#">Person 3</a>
-                <a class="dropdown-item" href="#">Person 4</a>
+                {% for person in site.people %}
+                  <a class="dropdown-item" href="{{ person.url }}">
+                    {{ person.first_name | capitalize}} {{ person.last_name | capitalize}}
+                  </a>
+                {% endfor %}
+              </div>
             </div>
           </li>
           <li class="nav-item">
