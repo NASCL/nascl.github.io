@@ -4,6 +4,7 @@
 $theme_primary: #f8b739;
 $theme_dark: #1d1919;
 $theme_light_gray: #e4e4e4;
+$theme_white: #fafafa;
 
 // Poppins font
 // @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
@@ -26,7 +27,7 @@ body {
   font-size: $theme_font_size;
   line-height: 1.8;
   font-weight: normal;
-  background: #fafafa;
+  background: $theme_white;
   color: gray;
 }
 
@@ -112,7 +113,7 @@ h1, h2, h3, h4, h5,
 }
 
 .nav-item.dropdown-menu {
-  background: #fafafa;
+  background: $theme_white;
 }
 
 .nav-link.dropdown-item {
