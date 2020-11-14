@@ -111,6 +111,10 @@ h1, h2, h3, h4, h5,
   font-size: $theme_font_size;
 }
 
+.nav-item.dropdown-menu {
+  background: #fafafa;
+}
+
 .nav-link.dropdown-item {
   color: gray !important;
 }
